@@ -15,11 +15,23 @@
 
 \usepackage{listings}
 
-\title{Team Contest Reference}
+\usepackage{geometry}
+\geometry{left=25mm,right=2cm, top=2cm, bottom=2cm}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Universität zu Lübeck, \texttt{getRandomNumber()\{return 4;\}}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{Team Contest Reference\\ \texttt{getRandomNumber()\{return 4;\}}}
 \author{Universität zu Lübeck}
 \begin{document}
 \lstset{basicstyle=\ttfamily\footnotesize,numbers=left,numberstyle=\tiny,tabsize=2,numbersep=5pt}
-\maketitle
+\maketitle\thispagestyle{fancy}
+
+\tableofcontents
 
 \section{Mathematische Algorithmen}
 \subsection{Primzahlen}
