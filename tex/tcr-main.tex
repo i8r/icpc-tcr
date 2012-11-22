@@ -6,6 +6,7 @@
 \usepackage{tgtermes}
 \usepackage[scaled]{berasans}
 \renewcommand*\ttdefault{txtt}
+\usepackage{pdfpages}
 
 \usepackage{babel}
 
@@ -74,4 +75,21 @@ Verwendung zu Berechnung des inversen Elements $b$ zu $a$ bezüglich einer Restk
 \lstinputlisting[language=c]{longest_common_subsequence.c}
 \subsection{Longest Increasing Subsequence}
 \lstinputlisting[language=c]{longest_increasing_subsequence.c}
+\section{Eine kleine C-Referenz}
+
+\includepdf[
+	scale=0.9,
+	angle=90,
+	pages=1,
+	pagecommand={		
+}]{c-refcard.pdf}
+
+\includepdf[
+	scale=0.9,
+	angle=90,
+	pages=2,
+	pagecommand={		
+}]{c-refcard.pdf}
+
+
 \end{document}
