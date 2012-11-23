@@ -51,6 +51,14 @@ Verwendung zu Berechnung des inversen Elements $b$ zu $a$ bezüglich einer Restk
 \[ ab\equiv 1 \mod n\quad\Leftrightarrow\quad s\equiv b \mod n\quad\text{ für }1=\text{ggT}(a,n)\]
 \subsubsection{Erweiterter Euklidischer Algorithmus}
 \lstinputlisting[language=Java]{eea.java}
+\subsection{Matrixmultiplikation}
+Strassen-Algorithmus: $\mathbf{C} = \mathbf{A} \mathbf{B} \qquad \mathbf{A},\mathbf{B},\mathbf{C} \in R^{2^n \times 2^n}$
+\begin{eqnarray*}
+\mathbf{C}_{1,1} & =& \mathbf{A}_{1,1} \mathbf{B}_{1,1} + \mathbf{A}_{1,2} \mathbf{B}_{2,1} \\
+\mathbf{C}_{1,2} &=& \mathbf{A}_{1,1} \mathbf{B}_{1,2} + \mathbf{A}_{1,2} \mathbf{B}_{2,2}\\
+\mathbf{C}_{2,1} &=& \mathbf{A}_{2,1} \mathbf{B}_{1,1} + \mathbf{A}_{2,2} \mathbf{B}_{2,1} \\
+\mathbf{C}_{2,2} &=& \mathbf{A}_{2,1} \mathbf{B}_{1,2} + \mathbf{A}_{2,2} \mathbf{B}_{2,2}
+\end{eqnarray*}
 \section{Datenstukturen}
 \subsection{Fenwick Tree (Binary Indexed Tree)}
 \lstinputlisting[language=Java]{fenwick.java}
@@ -64,6 +72,8 @@ Verwendung zu Berechnung des inversen Elements $b$ zu $a$ bezüglich einer Restk
 \lstinputlisting[language=c]{ford-fulkerson.c}
 \subsection{Floyd-Warshall}
 \lstinputlisting[language=java]{floyd.java}
+\subsection{Dijkstra}
+\lstinputlisting[]{dijkstra.txt}
 
 \section{Geometrische Algorithmen}
 \subsection{Graham Scan (Convex Hull)}
