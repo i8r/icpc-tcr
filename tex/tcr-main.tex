@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[safe,warn]{textcomp}
 \usepackage{tgtermes}
-\usepackage[scaled]{berasans}
+%\usepackage[scaled]{berasans}
 \renewcommand*\ttdefault{txtt}
 \usepackage{pdfpages}
 
@@ -29,7 +29,14 @@
 \title{Team Contest Reference\\ \texttt{getRandomNumber()\{return 4;\}}}
 \author{Universität zu Lübeck}
 \begin{document}
-\lstset{basicstyle=\ttfamily\footnotesize,numbers=left,numberstyle=\tiny,tabsize=2,numbersep=5pt}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\tiny,
+    tabsize=2,
+    numbersep=5pt,
+    columns=flexible
+}
 \maketitle\thispagestyle{fancy}
 
 \tableofcontents
@@ -38,6 +45,7 @@
 \subsection{Primzahlen}
 Für Primzahlen gilt immer (aber nicht nur für Primzahlen)
 \[a^p\equiv a\mod p \quad\text{ bzw. }\quad a^{p-1}\equiv 1 \mod p.\]
+Ein paar Primzahlen für den Hausgebrauch: $1000003, 2147483648 (2^{31}), 4294967291 (2^{32}), …(2^{63})$
 \subsubsection{Sieb des Eratosthenes}
 \lstinputlisting[language=Java]{eratosthenes.java}
 \subsubsection{Primzahlentest}
@@ -51,6 +59,7 @@ Verwendung zu Berechnung des inversen Elements $b$ zu $a$ bezüglich einer Restk
 \[ ab\equiv 1 \mod n\quad\Leftrightarrow\quad s\equiv b \mod n\quad\text{ für }1=\text{ggT}(a,n)\]
 \subsubsection{Erweiterter Euklidischer Algorithmus}
 \lstinputlisting[language=Java]{eea.java}
+Zur Berechnung des Inversen von $n$ im Restklassenring $p$ gilt: $d = \mathrm{eea}(p,n)$.
 \subsection{Matrixmultiplikation}
 Strassen-Algorithmus: $\mathbf{C} = \mathbf{A} \mathbf{B} \qquad \mathbf{A},\mathbf{B},\mathbf{C} \in R^{2^n \times 2^n}$
 \begin{eqnarray*}
@@ -69,7 +78,9 @@ Strassen-Algorithmus: $\mathbf{C} = \mathbf{A} \mathbf{B} \qquad \mathbf{A},\mat
 \subsection{Prim (Minimum Spanning Tree)}
 \lstinputlisting[language=c]{prim.c}
 \subsection{Maximaler Fluss (Ford-Fulkerson)}
-\lstinputlisting[language=c]{ford-fulkerson.c}
+\lstinputlisting[language=c]{flow.h}
+\lstinputlisting[language=c]{flow.c}
+%\lstinputlisting[language=c]{ford-fulkerson.c}
 \lstinputlisting[language=java]{ford-fulkerson.java}
 \subsection{Floyd-Warshall}
 \lstinputlisting[language=java]{floyd.java}
