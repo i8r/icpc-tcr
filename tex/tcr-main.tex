@@ -75,8 +75,12 @@ Strassen-Algorithmus: $\mathbf{C} = \mathbf{A} \mathbf{B} \qquad \mathbf{A},\mat
 \section{Graphenalgorithmen}
 \subsection{Topologische Sortierung}
 \lstinputlisting[language=Java]{toposort.java}
-\subsection{Prim (Minimum Spanning Tree)}
+\subsection{Minimum Spanning Tree}
+\subsubsection{Prim's Algorithm}
 \lstinputlisting[language=c]{prim.c}
+\subsubsection{Union and Find: Kruskal's Algorithm}
+Amortized time per operation is~$O(\alpha(n))$.
+\lstinputlisting[language=c]{unf.c}
 \subsection{Maximaler Fluss (Ford-Fulkerson)}
 \lstinputlisting[language=c]{flow.h}
 \lstinputlisting[language=c]{flow.c}
