@@ -10,11 +10,11 @@ static double maxDist(List<P> hull) {
 	double max = 0, tmp = 0;
 	int j = 0, n = hull.size();
 	for (P p : hull) {
-		while (tmp < dist(p, hull.get((j + 1) % n))) {
-			j = (j + 1) % n;
-			tmp = dist(p, hull.get(j));
-		}
-		max = Math.max(max, tmp);
+		for( P q : hull){
+			if( p == q ) continue;
+			tmp = dist(p, q);
+			max = Math.max(max, tmp);
+		}	
 	}
 	return max;
 }

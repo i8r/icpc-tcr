@@ -45,7 +45,7 @@
 \subsection{Primzahlen}
 Für Primzahlen gilt immer (aber nicht nur für Primzahlen)
 \[a^p\equiv a\mod p \quad\text{ bzw. }\quad a^{p-1}\equiv 1 \mod p.\]
-Ein paar Primzahlen für den Hausgebrauch: $1000003, 2147483648 (2^{31}), 4294967291 (2^{32}), …(2^{63})$
+Ein paar Primzahlen für den Hausgebrauch: $1000003, 2147483647 (2^{31}), 4294967291 (2^{32})$
 \subsubsection{Sieb des Eratosthenes}
 \lstinputlisting[language=Java]{eratosthenes.java}
 \subsubsection{Primzahlentest}
@@ -93,6 +93,8 @@ Amortized time per operation is~$O(\alpha(n))$.
 \subsection{Bellmann-Ford}
 Single source all paths, negative weights.
 \lstinputlisting[language=java]{bellmann-ford.java}
+\subsection{Starke Zusammenhangskomponenten (Kosaraju)}
+\lstinputlisting[language=c]{Kosaraju.c}
 
 \section{Geometrische Algorithmen}
 \subsection{Rotate a Point}
