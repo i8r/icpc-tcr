@@ -9,15 +9,19 @@
 \usepackage{pdfpages}
 
 \usepackage{babel}
+\usepackage{xcolor}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{wasysym}
 
 \usepackage{listings}
 
 \usepackage{geometry}
 \geometry{left=25mm,right=2cm, top=2cm, bottom=2cm}
+\usepackage{multicol}
+\setlength{\columnseprule}{.2pt}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -30,17 +34,23 @@
 \author{Universität zu Lübeck}
 \begin{document}
 \lstset{
+    xleftmargin= 8pt,
+    breaklines     = true,
     basicstyle=\ttfamily\footnotesize,
     numbers=left,
     numberstyle=\tiny,
     tabsize=2,
     numbersep=5pt,
-    columns=flexible
+    columns=flexible,
+		prebreak=\raisebox{0ex}[0ex][0ex]
+		        {\ensuretext{\color{gray}{\DOWNarrow}}}
 }
+
 \maketitle\thispagestyle{fancy}
 
 \tableofcontents
 
+\begin{multicols}{2}
 \section{Mathematische Algorithmen}
 \subsection{Primzahlen}
 Für Primzahlen gilt immer (aber nicht nur für Primzahlen)
@@ -56,7 +66,7 @@ Ein paar Primzahlen für den Hausgebrauch: $1000003, 2147483647 (2^{31}), 429496
 Bedeutung der größten gemeinsamen Teiler:
 \[ d = \text{ggT}(a,b) = as+bt \]
 Verwendung zu Berechnung des inversen Elements $b$ zu $a$ bezüglich einer Restklassengruppe $n$ ($a$ und $n$ müssen teilerfremd sein):
-\[ ab\equiv 1 \mod n\quad\Leftrightarrow\quad s\equiv b \mod n\quad\text{ für }1=\text{ggT}(a,n)\]
+\[ ab\equiv 1 \mod n \Leftrightarrow s\equiv b \mod n \text{ für }1=\text{ggT}(a,n)\]
 \subsubsection{Erweiterter Euklidischer Algorithmus}
 \lstinputlisting[language=Java]{eea.java}
 Zur Berechnung des Inversen von $n$ im Restklassenring $p$ gilt: $d = \mathrm{eea}(p,n)$.
@@ -116,6 +126,7 @@ Single source all paths, negative weights.
 \subsection{Longest Increasing Subsequence}
 \lstinputlisting[language=c]{longest_increasing_subsequence.c}
 \section{Eine kleine C-Referenz}
+\end{multicols}
 
 \includepdf[
 	scale=0.9,
